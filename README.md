@@ -6,7 +6,7 @@ Homebrew formulae for elpabl0's tools.
 
 ```bash
 brew tap alkautsarf/tap
-brew install eltyp00r
+brew install <formula>
 ```
 
 ## Available Formulae
@@ -14,3 +14,4 @@ brew install eltyp00r
 | Formula | Description |
 |---------|-------------|
 | eltyp00r | Terminal typing trainer with adaptive difficulty and AI coaching |
+| elwrit00r | Terminal writing app with vim keybindings and AI companion |
