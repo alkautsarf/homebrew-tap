@@ -1,12 +1,12 @@
 class Elwrit00r < Formula
   desc "Terminal writing app with vim keybindings and AI companion"
   homepage "https://github.com/alkautsarf/elwrit00r"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/elwrit00r/releases/download/v0.3.0/elwrit00r-v0.3.0-darwin-arm64.tar.gz"
-      sha256 "1d0f451f99e026f2a56e66d01fc6d029a374d072ecf89057312737cd2cc2d1bc"
+      url "https://github.com/alkautsarf/elwrit00r/releases/download/v0.3.1/elwrit00r-v0.3.1-darwin-arm64.tar.gz"
+      sha256 "99c7c49c02e5ef526db655f6f80c764e8e50b8fe19c824cacd76c92d4405bba2"
     end
   end
 
