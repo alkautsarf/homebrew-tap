@@ -1,19 +1,19 @@
 class Eltyp00r < Formula
   desc "Terminal typing trainer with adaptive difficulty and AI coaching"
   homepage "https://github.com/alkautsarf/eltyp00r"
-  version "0.4.3"
+  version "0.5.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/eltyp00r/releases/download/v0.4.3/eltyp00r-v0.4.3-darwin-arm64.tar.gz"
-      sha256 "a9d135d391a000bd4691ad3ccab74c4b053a2992f7ce3198353b6d7125fc17d4"
+      url "https://github.com/alkautsarf/eltyp00r/releases/download/v0.5.0/eltyp00r-v0.5.0-darwin-arm64.tar.gz"
+      sha256 "d5eaaddce413a4518245b3c1027f8df016ad3f70e3e2b4fca1e04f02774934ea"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/alkautsarf/eltyp00r/releases/download/v0.4.3/eltyp00r-v0.4.3-linux-x64.tar.gz"
-      sha256 "fa72d9ffa98feccdff4c919ee13088123f328a5e0dd3eab62a72e4327ccbcfaf"
+      url "https://github.com/alkautsarf/eltyp00r/releases/download/v0.5.0/eltyp00r-v0.5.0-linux-x64.tar.gz"
+      sha256 "e99db1acab6f7574bc4e32a000ddd0c10dc60f34248a42cd06553aa6566f9ef8"
     end
   end
 
