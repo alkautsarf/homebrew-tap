@@ -7,14 +7,14 @@ class Phosphor < Formula
   on_macos do
     on_arm do
       url "https://github.com/alkautsarf/phosphor/releases/download/v0.1.0/phosphor-v0.1.0-darwin-arm64.tar.gz"
-      sha256 "4bc42d6dcb004688cec2d5be8a5272182304a67ba43b74cb34eb3c711a97678c"
+      sha256 "6cdda1bfd56d0591199b9738f5f73f5ed0495873f0a00cdab82072386088cd74"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/alkautsarf/phosphor/releases/download/v0.1.0/phosphor-v0.1.0-linux-x64.tar.gz"
-      sha256 "4d680d94b249f05ae03e6ec43b2b0d07f0e254a976d20c3b5dcf761d1f73211a"
+      sha256 "f43b681ab1da0658c75bed895b4fe94514031748ccbeabd79045ec56e0ffd672"
     end
   end
 
