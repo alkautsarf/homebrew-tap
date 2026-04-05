@@ -1,20 +1,20 @@
 class Phosphor < Formula
   desc "Render images in your terminal — Kitty, Sixel, iTerm2 with tmux passthrough"
   homepage "https://github.com/alkautsarf/phosphor"
-  version "0.1.0"
+  version "0.2.0"
   depends_on "oven-sh/bun/bun"
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/phosphor/releases/download/v0.1.0/phosphor-v0.1.0-darwin-arm64.tar.gz"
-      sha256 "6cdda1bfd56d0591199b9738f5f73f5ed0495873f0a00cdab82072386088cd74"
+      url "https://github.com/alkautsarf/phosphor/releases/download/v0.2.0/phosphor-v0.2.0-darwin-arm64.tar.gz"
+      sha256 "fea34c0774e887bed35ce1229f5578c2d6bde532e6f16ddf52ec881596362457"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/alkautsarf/phosphor/releases/download/v0.1.0/phosphor-v0.1.0-linux-x64.tar.gz"
-      sha256 "f43b681ab1da0658c75bed895b4fe94514031748ccbeabd79045ec56e0ffd672"
+      url "https://github.com/alkautsarf/phosphor/releases/download/v0.2.0/phosphor-v0.2.0-linux-x64.tar.gz"
+      sha256 "706735e6aed04a504aba24e33c08de9f980154c8fdae1aefaa8325f9867fd9f8"
     end
   end
 
