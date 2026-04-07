@@ -7,7 +7,7 @@ class WhatsappTui < Formula
   on_macos do
     on_arm do
       url "https://github.com/alkautsarf/whatsapp-tui-ts/releases/download/v0.4.3/whatsapp-tui-v0.4.3-darwin-arm64.tar.gz"
-      sha256 "676787f0181f509bcef0cc874aac0533004e09863946e5d28834956c9d321796"
+      sha256 "3143d0f876bba164f92ceaea776e7bc182b4f79c44463277c6f2288a71dd8d5d"
     end
   end
 
