@@ -1,9 +1,9 @@
 class Hakr < Formula
   desc "Full-featured Hacker News TUI with read and write support"
   homepage "https://github.com/alkautsarf/hakr"
-  url "https://github.com/alkautsarf/hakr/releases/download/v0.2.2/hakr-v0.2.2.tar.gz"
-  sha256 "d244148825b47476585b04ad2b6d747df69d51ab83768e14fd0ddf1b1b5d6bd3"
-  version "0.2.2"
+  url "https://github.com/alkautsarf/hakr/releases/download/v0.3.0/hakr-v0.3.0.tar.gz"
+  sha256 "17f4dc7e430510d3dc77c3becd31987e44ff498e86f58fcceff69bca75ae910f"
+  version "0.3.0"
   depends_on "oven-sh/bun/bun"
 
   def install
