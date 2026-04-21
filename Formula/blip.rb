@@ -24,7 +24,11 @@ class Blip < Formula
   # the user's permission survive forever. If the LaunchAgent is already
   # loaded, bundle-refresh also kickstarts it so the running process
   # picks up the new binary automatically.
+  #
+  # Brew sandboxes post_install to the cellar + prefix; writing to
+  # ~/Applications/ needs HOMEBREW_NO_SANDBOX.
   def post_install
+    ENV["HOMEBREW_NO_SANDBOX"] = "1"
     system "#{bin}/BlipSetup", "bundle-refresh"
   end
 
