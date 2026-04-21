@@ -18,19 +18,12 @@ class Blip < Formula
     bin.install ".build/release/BlipSetup" => "BlipSetup"
   end
 
-  # After every install/upgrade, rebuild ~/Applications/Blip.app with a
-  # stable CFBundleIdentifier + designated requirement. macOS TCC keys
-  # Accessibility grants by the DR, so doing this on every upgrade lets
-  # the user's permission survive forever. If the LaunchAgent is already
-  # loaded, bundle-refresh also kickstarts it so the running process
-  # picks up the new binary automatically.
-  #
-  # Brew sandboxes post_install to the cellar + prefix; writing to
-  # ~/Applications/ needs HOMEBREW_NO_SANDBOX.
-  def post_install
-    ENV["HOMEBREW_NO_SANDBOX"] = "1"
-    system "#{bin}/BlipSetup", "bundle-refresh"
-  end
+  # NOTE: `brew` sandboxes post_install to the cellar + prefix, so we
+  # can't assemble ~/Applications/Blip.app from here (the write is
+  # blocked even with HOMEBREW_NO_SANDBOX). Users run `blip install`
+  # after every brew upgrade — the command is fully idempotent and
+  # refreshes the bundle + kickstarts launchd, so the TCC grant still
+  # persists.
 
   def caveats
     <<~EOS
@@ -43,8 +36,9 @@ class Blip < Formula
 
         System Settings → Privacy & Security → Accessibility
 
-      The grant persists across every future `brew upgrade` thanks to
-      the stable bundle identifier — no re-toggling.
+      After future `brew upgrade`s, just run `blip install` again — it's
+      idempotent and refreshes the bundle with the new binary, preserving
+      your Accessibility grant thanks to the stable bundle identifier.
 
       For jump-to-tmux to work, set @cwd on every pane — see README.
 
