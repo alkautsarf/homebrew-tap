@@ -18,25 +18,35 @@ class Blip < Formula
     bin.install ".build/release/BlipSetup" => "BlipSetup"
   end
 
+  # After every install/upgrade, rebuild ~/Applications/Blip.app with a
+  # stable CFBundleIdentifier + designated requirement. macOS TCC keys
+  # Accessibility grants by the DR, so doing this on every upgrade lets
+  # the user's permission survive forever. If the LaunchAgent is already
+  # loaded, bundle-refresh also kickstarts it so the running process
+  # picks up the new binary automatically.
+  def post_install
+    system "#{bin}/BlipSetup", "bundle-refresh"
+  end
+
   def caveats
     <<~EOS
-      Get started:
+      One-shot setup (bundle + hooks + LaunchAgent + start):
 
-        blip start             # launch the notch app in the background
-        blip install           # wire hooks into ~/.claude/settings.json
-        blip doctor            # verify everything's connected
+        blip install
 
-      Grant Accessibility permission on first launch so global hotkeys
-      can fire from inside tmux:
+      On first launch macOS prompts for Accessibility. Grant it to
+      "Blip.app" under:
 
-        System Settings → Privacy & Security → Accessibility → BlipApp
+        System Settings → Privacy & Security → Accessibility
+
+      The grant persists across every future `brew upgrade` thanks to
+      the stable bundle identifier — no re-toggling.
 
       For jump-to-tmux to work, set @cwd on every pane — see README.
 
       To remove cleanly:
 
-        blip uninstall         # restore settings.json byte-perfect
-        blip stop              # terminate the app
+        blip uninstall
     EOS
   end
 
