@@ -1,13 +1,13 @@
 class Kura < Formula
   desc "Wallet terminal for EVM. Daemon + tmux popup + 4 IO surfaces"
   homepage "https://github.com/alkautsarf/kura"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/kura/releases/download/v0.1.8/kura-v0.1.8-darwin-arm64.tar.gz"
-      sha256 "8b1205115a78b8d6abbd3ff8b2828e8e590785e69e925d6198a02528f3e76e54"
+      url "https://github.com/alkautsarf/kura/releases/download/v0.1.9/kura-v0.1.9-darwin-arm64.tar.gz"
+      sha256 "1df931b27e525aacaf3eae4b588735b957ecbaf12b3e6a7d99124ee67544a8e2"
 
       def install
         bin.install "kura-darwin-arm64" => "kura"
@@ -17,8 +17,8 @@ class Kura < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/alkautsarf/kura/releases/download/v0.1.8/kura-v0.1.8-linux-x64.tar.gz"
-      sha256 "38b2654cf68c59b6dcee2a95d6ca2009b09830c7fa5ea09c7ef5cf2a4d936307"
+      url "https://github.com/alkautsarf/kura/releases/download/v0.1.9/kura-v0.1.9-linux-x64.tar.gz"
+      sha256 "5804437ef20616c0e1e7b6d320e4f6affa2c36dc7a6875b7be4b5aec98ee2225"
 
       def install
         bin.install "kura-linux-x64" => "kura"
@@ -27,6 +27,6 @@ class Kura < Formula
   end
 
   test do
-    assert_match "kura 0.1.8", shell_output("#{bin}/kura --version")
+    assert_match "kura 0.1.9", shell_output("#{bin}/kura --version")
   end
 end
