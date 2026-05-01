@@ -2,6 +2,7 @@ class Kura < Formula
   desc "Wallet terminal for EVM. Daemon + tmux popup + 4 IO surfaces"
   homepage "https://github.com/alkautsarf/kura"
   version "0.1.13"
+  revision 1
   license "MIT"
 
   on_macos do
@@ -48,12 +49,14 @@ class Kura < Formula
   end
 
   def post_install
-    # If the user has already enrolled the daemon under brew services, force a restart
-    # so the freshly upgraded binary is in use. Pre-enrollment installs/upgrades skip
-    # this (no plist exists yet) and rely on the caveats text above for setup.
+    # If the user has already enrolled the daemon under brew services, force a
+    # kill-and-restart via launchctl directly. `brew services restart` from
+    # inside post_install was unreliable (kills daemon but new launch fails
+    # silently — likely env/sandbox issue with the brew subprocess). launchctl
+    # kickstart is the lower-level launchd primitive and works.
     plist_path = "#{Dir.home}/Library/LaunchAgents/homebrew.mxcl.kura.plist"
     if File.exist?(plist_path)
-      system "brew", "services", "restart", "kura"
+      system "/bin/launchctl", "kickstart", "-k", "gui/#{Process.uid}/homebrew.mxcl.kura"
     end
   end
 
