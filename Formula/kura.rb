@@ -1,13 +1,13 @@
 class Kura < Formula
-  desc "Wallet terminal for EVM. Daemon + tmux popup + 4 IO surfaces"
+  desc "EVM terminal wallet"
   homepage "https://github.com/alkautsarf/kura"
-  version "0.1.17"
+  version "0.1.18"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/kura/releases/download/v0.1.17/kura-v0.1.17-darwin-arm64.tar.gz"
-      sha256 "7a43afc6264b41cf1ee7674ec731cde8a4e2d30746e1fd594f2372e834dc3254"
+      url "https://github.com/alkautsarf/kura/releases/download/v0.1.18/kura-v0.1.18-darwin-arm64.tar.gz"
+      sha256 "84e71c5157c38a5ac890b8f02145e72f765594e8a4cfb50391c64b69742c5a7a"
 
       def install
         bin.install "kura-darwin-arm64" => "kura"
@@ -18,8 +18,8 @@ class Kura < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/alkautsarf/kura/releases/download/v0.1.17/kura-v0.1.17-linux-x64.tar.gz"
-      sha256 "72d51a9223fc106d874e08e7f72c9f518b0e3bec057f45f4165094bd85dc54a9"
+      url "https://github.com/alkautsarf/kura/releases/download/v0.1.18/kura-v0.1.18-linux-x64.tar.gz"
+      sha256 "1b29077883e1a1a567b49dab54adf13fa9a7c9b8f7cc19f33c8d9f2b30bd399d"
 
       def install
         bin.install "kura-linux-x64" => "kura"
