@@ -1,15 +1,15 @@
 class Alrm00r < Formula
   desc "Terminal alarm app for heavy sleepers, typing challenge to dismiss"
   homepage "https://github.com/alkautsarf/alrm00r"
-  version "0.1.1"
+  version "0.1.2"
 
   depends_on "tmux"
   depends_on "switchaudio-osx" => :recommended
 
   on_macos do
     on_arm do
-      url "https://github.com/alkautsarf/alrm00r/releases/download/v0.1.1/alrm00r-v0.1.1-darwin-arm64.tar.gz"
-      sha256 "807a428c78ae80addf42e7153042e3cbf9d13a9e2dd2f229e7952fa62d4fc89c"
+      url "https://github.com/alkautsarf/alrm00r/releases/download/v0.1.2/alrm00r-v0.1.2-darwin-arm64.tar.gz"
+      sha256 "148d6cd0f717d1d19f86b2de129512e29dbd8e3ee67095fe654b386bf5eb6d91"
     end
   end
 
