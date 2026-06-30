@@ -1,9 +1,9 @@
 class WhatsappTui < Formula
   desc "WhatsApp TUI client with vim keybindings"
   homepage "https://github.com/alkautsarf/whatsapp-tui-ts"
-  url "https://github.com/alkautsarf/whatsapp-tui-ts/releases/download/v0.5.4/whatsapp-tui-v0.5.4-source.tar.gz"
-  sha256 "71b4ac04f80e7fa514e7c4c9ce80fb7734169a8b9ca0c6411261f142c7bfc03e"
-  version "0.5.4"
+  url "https://github.com/alkautsarf/whatsapp-tui-ts/releases/download/v0.5.5/whatsapp-tui-v0.5.5-source.tar.gz"
+  sha256 "da56d7d4460c6818d7fa1f726426ff8364b4d320534b1970eab19d20e3b3165a"
+  version "0.5.5"
   depends_on "oven-sh/bun/bun"
 
   def install
